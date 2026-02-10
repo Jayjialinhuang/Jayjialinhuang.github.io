@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>Jialin Huang</title>
 
@@ -21,17 +22,16 @@
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
-                  Jialin Huang
+                  Jialin Huang <span style=\"font-family: 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;\">黄佳琳</span>
                 </p>
                 <p>
-                  I am a fifth year PhD student in Computer Science at <a href="https://www.gmu.edu/">George Mason University</a>, advised by <a href="https://cragl.cs.gmu.edu/">Prof. Yotam Gingold</a>. My research interests include computer graphics and human-computer interaction.
+                  I am a fifth-year PhD student in Computer Science at <a href="https://www.gmu.edu/">George Mason University</a>, advised by <a href="https://cragl.cs.gmu.edu/">Prof. Yotam Gingold</a>. My research sits at the intersection of computer graphics and HCI, with an emphasis on accessible multimodal creative tools—systems that turn messy human input (hand motion, sketches, speech, and video) into controllable 3D content and sound.
                 </p>
                 <p>
-                  My primary motivation is accessibility. I care about both the technical path and the real-world impact: building systems that make technology more inclusive and usable for people with disabilities and non-experts. My work sits at the intersection of HCI and computer graphics, often involving multimodal interaction and learning to expand access through practical research.
+                  I am especially interested in non-visual interaction for Blind and Visually Impaired (BVI) users: how to make geometry perceivable through sound, and how to make creative workflows more learnable for non-experts. Recent projects include ShapeSonic (sonifying fingertip interactions for virtual shape perception) and MoSound (generative sound design for motion graphics).
                 </p>
                 <p>
-                  In the summer of 2024, I interned at <a href="https://www.adobe.com/">Adobe</a>, mentored by <a href="https://rubaiathabib.me/">Rubaiat Habib</a>.
-                  Before coming to GMU, I got my Bachelor's degree in Applied Math at the <a href="https://en.ustc.edu.cn/">University of Science and Technology of China (USTC)</a>.
+                  Before GMU, I earned a B.S. in Applied Mathematics from <a href="https://en.ustc.edu.cn/">the University of Science and Technology of China (USTC)</a>. I previously interned at <a href="https://www.adobe.com/">Adobe</a> Research (2024) with <a href="https://rubaiathabib.me/">Rubaiat Habib Kazi</a>, collaborating with <a href="https://pseeth.github.io/">Prem Seetharaman</a>, <a href="https://langlo.is/">Timothy Richard Langlois</a>, and <a href="https://www.liyiwei.org/">Li-Yi Wei</a>.
                 </p>
                 <p style="text-align:center">
                   <a href="data/Jialin_CV.pdf">CV</a> &nbsp;/&nbsp;
@@ -50,16 +50,43 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I am passionate about developing systems that help underrepresented people. My research focuses on computer graphics, human-computer interaction, and accessibility, often involving multimodal interaction to expand access through practical research.
-                </p>
+                <h2>Publications</h2>
               </td>
             </tr>
           </tbody></table>
 
           <!-- Publications -->
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr bgcolor="#FFE7C2">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <img src='images/mosound.png' width=100%>
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">MoSound: An Interactive Tool for Generative Sound Design in Motion Graphics</span>
+                <br>
+                <strong>Jialin Huang</strong>,
+                <a href="https://pseeth.github.io/">Prem Seetharaman</a>,
+                <a href="https://langlo.is/">Timothy Richard Langlois</a>,
+                <a href="https://www.liyiwei.org/">Li-Yi Wei</a>,
+                <a href="https://rubaiathabib.me/">Rubaiat Habib Kazi</a>,
+                <a href="https://cragl.cs.gmu.edu/">Yotam Gingold</a>
+                <br>
+                <em>CHI</em>, 2026
+                <br>
+                <a href="data/mosound.pdf">paper</a>
+                /
+                <a href="https://cragl.cs.gmu.edu/mosound/">project page</a>
+                <p></p>
+                <p>
+                  MoSound is an interactive system for adding sound effects to motion graphics videos. It detects key visual events, suggests short sound descriptions, and lets users map motion features (e.g., position and velocity) to audio properties (e.g., stereo panning and volume) to guide generative sound synthesis.
+                </p>
+              </td>
+            </tr>
+
+
 
             <tr bgcolor="#ffffd0">
               <td style="padding:16px;width:20%;vertical-align:middle">
@@ -79,9 +106,9 @@
                 <br>
                 <em>SIGGRAPH Asia</em>, 2023
                 <br>
-                <a href="https://cragl.cs.gmu.edu/shapesonic/">project page</a>
-                /
                 <a href="https://cragl.cs.gmu.edu/shapesonic/">paper</a>
+                /
+                <a href="https://cragl.cs.gmu.edu/shapesonic/">project page</a>
                 <p></p>
                 <p>
                   ShapeSonic is a system designed to convey vivid 3D shape perception using purely audio feedback or sonification. ShapeSonic tracks users' fingertips in 3D and provides real-time sound feedback, based on a mass-produced, commodity hardware platform (Oculus Quest). In a study with 15 sighted and 6 BVI users, we demonstrate the value of ShapeSonic in shape landmark localization and recognition.
@@ -89,55 +116,14 @@
               </td>
             </tr>
 
-          </tbody></table>
+</tbody></table>
 
           <!-- Education Section -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Education</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle;text-align:center">
-                <div class="colored-box" style="background-color: #edd892;">
-                  <h2>Education</h2>
-                </div>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <strong>George Mason University</strong> — PhD in Computer Science (2021 - Present)
-                <br>
-                Advised by <a href="https://cragl.cs.gmu.edu/gingold/">Prof. Yotam Gingold</a>
-                <br><br>
-                <strong>University of Science and Technology of China (USTC)</strong> — B.S. in Applied Mathematics
-              </td>
-            </tr>
-          </tbody></table>
+          
 
-          <!-- Experience Section -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Experience</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle;text-align:center">
-                <div class="colored-box" style="background-color: #d4e8d0;">
-                  <h2>Industry</h2>
-                </div>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <strong><a href="https://www.adobe.com/">Adobe</a></strong> — Research Intern (Summer 2024)
-                <br>
-                Mentored by <a href="https://rubaiathabib.me/">Rubaiat Habib</a>
-              </td>
-            </tr>
-          </tbody></table>
+
+
+
 
           <!-- Footer -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
