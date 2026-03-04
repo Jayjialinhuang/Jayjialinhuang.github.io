@@ -39,7 +39,8 @@
   <meta name="citation_title" content="MoSound: An Interactive Tool for Generative Sound Design in Motion Graphics">
   <meta name="citation_author" content="Huang, Jialin">
   <meta name="citation_author" content="Seetharaman, Prem">
-  <meta name="citation_author" content="Langlois, Timothy Richard">
+  <meta name="citation_author" content="Langlois, Timothy">
+  <meta name="citation_doi" content="10.1145/3772318.3791162">
   <meta name="citation_author" content="Wei, Li-Yi">
   <meta name="citation_author" content="Kazi, Rubaiat Habib">
   <meta name="citation_author" content="Gingold, Yotam">
@@ -145,6 +146,12 @@
                   <a href="../data/MoSound.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
                     <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://doi.org/10.1145/3772318.3791162" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-acmdl"></i></span>
+                    <span>ACM DL</span>
                   </a>
                 </span>
               </div>
@@ -253,35 +260,33 @@
   <section class="section hero is-light" id="video">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
+      <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <div class="media-placeholder video-placeholder">
-            <i class="fas fa-video"></i>
-            <span>YouTube embed placeholder</span>
-          </div>
+          <video controls preload="metadata" style="width:100%;border-radius:var(--border-radius-lg);box-shadow:var(--shadow-xl);display:block;">
+            <source src="static/videos/Video.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 6. BibTeX -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@inproceedings{huang2026mosound,
-  title={MoSound: An Interactive Tool for Generative Sound Design in Motion Graphics},
-  author={Huang, Jialin and Seetharaman, Prem and Langlois, Timothy Richard and Wei, Li-Yi and Kazi, Rubaiat Habib and Gingold, Yotam},
-  booktitle={Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
-  year={2026},
-  publisher={ACM},
-  url={https://cragl.cs.gmu.edu/mosound/}
-}</code></pre>
+  <section class="section" id="bibtex">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">BibTeX</h2>
+      <pre style="background:#f5f5f5;border-radius:8px;padding:1.25rem;font-size:0.85rem;overflow-x:auto;line-height:1.6;">@inproceedings{MoSound,
+  author    = {Huang, Jialin and Seetharaman, Prem and Langlois, Timothy and Wei, Li-Yi and Kazi, Rubaiat Habib and Gingold, Yotam},
+  title     = {{MoSound}: {An} Interactive Tool for Generative Sound Design in Motion Graphics},
+  booktitle = {Proceedings of the ACM CHI Conference on Human Factors in Computing Systems},
+  series    = {CHI},
+  year      = {2026},
+  keywords  = {sound synthesis, motion graphics, generative AI, vision-language models},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3772318.3791162},
+  doi       = {10.1145/3772318.3791162},
+  numpages  = {13}
+}</pre>
     </div>
   </section>
 
