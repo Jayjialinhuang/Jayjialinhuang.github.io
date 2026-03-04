@@ -1,0 +1,74 @@
+1. 
+Description: Cartoon, playful,clacking; Triangle character feets together
+Timeline: 0.00s - 0.59s (duration: 0.59s)
+
+Motion to Sound Mappings:
+• v → volume
+  Range: 0.00 to 0.70
+  Smoothing: 0
+
+
+2. 
+Description: Cartoon, playful, stretch, low pitch; Triangle character stretches and moves its limbs energetically.
+Timeline: 0.49s - 1.14s (duration: 0.65s)
+
+Motion to Sound Mappings:
+• v → volume
+  Range: 0.00 to 0.70
+  Smoothing: 2
+• x → panning
+  Range: 0.00 to 1.00
+  Smoothing: 0
+
+
+3. 
+Description: Stick, playful, flop,clacking; Triangle character waving arms energetically.
+Timeline: 1.29s - 1.71s (duration: 0.42s)
+
+Motion to Sound Mappings:
+• v → volume
+  Range: 0.00 to 0.60
+  Smoothing: 0
+• distance → panning
+  Range: 0.00 to 1.00
+  Smoothing: 0
+
+
+4. 
+Description: Cartoon, straight, step; Triangle character steps one step right.
+Timeline: 1.81s - 2.34s (duration: 0.53s)
+
+Motion to Sound Mappings:
+• size → volume
+  Range: 0.00 to 0.60
+  Smoothing: 0
+
+
+5. 
+Description: Cartoon, soft, blink; Character blinks eyes closed and opens.
+Timeline: 2.75s - 3.21s (duration: 0.46s)
+
+
+6. 
+Description: Cartoon, playful, Whoosh, light; Pink stroke moves cross the screen
+Timeline: 3.45s - 4.10s (duration: 0.66s)
+
+Motion to Sound Mappings:
+• y → panning
+  Range: 0.00 to 1.00
+  Smoothing: 0
+
+
+7. 
+Description: Wood, playful, bounce; Triangle character bounces and falls on the surface
+Timeline: 3.56s - 4.49s (duration: 0.93s)
+
+Motion to Sound Mappings:
+• v → volume
+  Range: 0.00 to 0.70
+  Smoothing: 0
+
+
+8. 
+Description: Cartoon, soft, blink, clarking; Triangle character blinks eyes several times.
+Timeline: 4.80s - 6.49s (duration: 1.69s)

@@ -1,0 +1,28 @@
+1. 
+Description: Soft, gentle, fade in; Green Circle gradually moves to the center
+Timeline: 0.00s - 1.07s (duration: 1.07s)
+
+Motion to Sound Mappings:
+• v → volume
+  Range: 0.00 to 1.00
+  Smoothing: 0
+
+
+2. 
+Description: Smooth, Soft, resonant, Expansion; Concentric circles expand outward from center.
+Timeline: 1.06s - 2.01s (duration: 0.95s)
+
+
+3. 
+Description: Smooth, Soft, Swirl; Concentric circles swirl and shrink inward.
+Timeline: 1.98s - 3.06s (duration: 1.08s)
+
+
+4. 
+Description: swish, high speed, multitime, low pitch; Colored bars slide in from the top.
+Timeline: 3.76s - 4.77s (duration: 1.00s)
+
+
+5. 
+Description: Smooth, dynamic, whoosh; Circle moves and stripes slide off screen.
+Timeline: 5.03s - 6.32s (duration: 1.29s)

@@ -1,0 +1,84 @@
+1. 
+Description: airy, fly, light, low pitch; Player jumps with the ball towards the hoop.
+Timeline: 0.00s - 0.30s (duration: 0.30s)
+
+Motion to Sound Mappings:
+• x → panning
+  Range: 0.40 to 0.70
+  Smoothing: 1
+• x → volume
+  Range: 0.00 to 0.30
+  Smoothing: 1
+
+
+2. 
+Description: Rubber, energetic, slam dunk; Player performs a slam dunk and hangs on the rim.
+Timeline: 0.34s - 1.20s (duration: 0.86s)
+
+Motion to Sound Mappings:
+• x → panning
+  Range: 0.40 to 0.70
+  Smoothing: 4
+• x → volume
+  Range: 0.00 to 0.30
+  Smoothing: 1
+• angle → volume
+  Range: 0.00 to 0.30
+  Smoothing: 0
+
+
+3. 
+Description: wood, low pitch, soft, Groaning; Person hangs on the rim.
+Timeline: 0.43s - 1.20s (duration: 0.76s)
+
+Motion to Sound Mappings:
+• x → panning
+  Range: 0.40 to 0.70
+  Smoothing: 4
+• x → volume
+  Range: 0.00 to 0.50
+  Smoothing: 5
+
+
+4. 
+Description: Air, bounce, whoosh; Person jumps and falls on the ground
+Timeline: 1.22s - 1.93s (duration: 0.71s)
+
+
+5. 
+Description: Air, dynamic, whoosh; Person jumps energetically.
+Timeline: 2.37s - 3.51s (duration: 1.14s)
+
+Motion to Sound Mappings:
+• x → panning
+  Range: 0.40 to 0.80
+  Smoothing: 5
+• v → volume
+  Range: 0.00 to 0.50
+  Smoothing: 6
+
+
+6. 
+Description: Rubber, bouncy, bounce; Ball bounces
+Timeline: 4.15s - 4.93s (duration: 0.78s)
+
+Motion to Sound Mappings:
+• x → panning
+  Range: 0.00 to 0.70
+  Smoothing: 3
+• angle → volume
+  Range: 0.00 to 0.50
+  Smoothing: 2
+
+
+7.
+Description: Wood, soft, cracking; Person bounces off the ground.
+Timeline: 4.27s - 4.91s (duration: 0.64s)
+
+Motion to Sound Mappings:
+• x → panning
+  Range: 0.00 to 0.70
+  Smoothing: 2
+• v → volume
+  Range: 0.00 to 0.50
+  Smoothing: 2

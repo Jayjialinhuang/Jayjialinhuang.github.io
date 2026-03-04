@@ -1,0 +1,50 @@
+1. 
+Description: feathers, light, rhythmic, footsteps; Ostrich runs with rhythmic steps.
+Timeline: 0.00s - 0.37s (duration: 0.37s)
+
+Motion to Sound Mappings:
+• x → panning
+  Range: 0.00 to 0.20
+  Smoothing: 0
+• size → volume
+  Range: 0.00 to 0.40
+  Smoothing: 0
+ 
+ 
+2. 
+Description: Feathery, light, rhythmic, flying; A cartoon ostrich runs swiftly across the screen.
+Timeline: 0.36s - 1.24s (duration: 0.88s)
+
+Motion to Sound Mappings:
+• x → panning
+  Range: 0.20 to 0.80
+  Smoothing: 3
+• y → volume
+  Range: 0.00 to 0.40
+  Smoothing: 0
+
+
+3. 
+Description: feathers, light, rhythmic, footsteps; Ostrich runs swiftly across the screen.
+Timeline: 1.20s - 2.45s (duration: 1.26s)
+
+Motion to Sound Mappings:
+• x → panning
+  Range: 0.50 to 1.00
+  Smoothing: 0
+• v → volume
+  Range: 0.00 to 0.40
+  Smoothing: 0
+
+
+4. 
+Description: feathers, light, rhythmic, footsteps; An ostrich runs across the screen with a smooth gait.
+Timeline: 3.39s - 4.74s (duration: 1.35s)
+
+Motion to Sound Mappings:
+• y → volume
+  Range: 0.00 to 0.40
+  Smoothing: 0
+• x → panning
+  Range: 0.00 to 1.00
+  Smoothing: 0

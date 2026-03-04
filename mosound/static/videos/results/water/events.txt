@@ -1,0 +1,22 @@
+1.
+Description: Liquid, energetic, splash; Water stretches and moves.     
+Timeline: 0.00s - 2.30s (duration: 2.30s)
+
+Motion to Sound Mappings:
+• y → volume
+  Range: 0.00 to 0.70
+  Smoothing: 2
+• x → panning
+  Range: 0.00 to 1.00
+  Smoothing: 4
+
+
+2. 
+Description: Liquid, light, splatter, drip; Droplets shoot upwards and 
+fall back.
+Timeline: 2.13s - 2.40s (duration: 0.27s)
+
+Motion to Sound Mappings:
+• v → volume
+  Range: 0.00 to 1.00
+  Smoothing: 4
