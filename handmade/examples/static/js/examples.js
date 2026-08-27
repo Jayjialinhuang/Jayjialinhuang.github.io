@@ -39,15 +39,18 @@ const examples = [
           before: "static/images/school-desk/edit-before.png",
           after: "static/images/school-desk/edit-after.png",
           instruction: "This is correct，please generate multiview based on this right view",
-          note: "The edited result supplied the front view in the final composite."
+          note: "This edit remains in the history; the preferred final below comes from a separate reconstruction.",
+          references: [
+            { src: "static/images/school-desk/vr-edit-right-reference.png", label: "level 1(2) · Right view" }
+          ]
         },
         reconstruction: {
           input: "static/images/school-desk/hunyuan-input.png",
           inputTitle: "Hunyuan input",
-          inputMeta: "final composite",
-          inputNote: "Front from the edit; left/right and back from selected alternatives",
+          inputMeta: "preferred 3D run",
+          inputNote: "front only · selected for the preferred final result",
           model: "static/models/school-desk/final.glb",
-          modelTitle: "Final output"
+          modelTitle: "Preferred final output"
         }
       },
       {
@@ -70,7 +73,11 @@ const examples = [
           before: "static/images/school-desk/2d-edit-before.png",
           after: "static/images/school-desk/2d-edit-after.png",
           instruction: "The seat should more be in the center",
-          note: "The revised candidate was then used for the final view composition."
+          note: "The revised candidate was then used for the final view composition.",
+          references: [
+            { src: "static/images/school-desk/2d-drawing-left.png", label: "Left-side drawing" },
+            { src: "static/images/school-desk/2d-drawing-perspective.png", label: "Front-left drawing" }
+          ]
         },
         viewEdits: [
           {
@@ -82,7 +89,11 @@ const examples = [
             afterTitle: "Assembled input",
             afterMeta: "2 selected views",
             instruction: "Selected front + left from the edited candidate.",
-            note: "The final view mapping—not the last browsed thumbnail—determines the actual Hunyuan input."
+            note: "The final view mapping—not the last browsed thumbnail—determines the actual Hunyuan input.",
+            references: [
+              { src: "static/images/school-desk/2d-selected-front.png", label: "Front" },
+              { src: "static/images/school-desk/2d-selected-left.png", label: "Left" }
+            ]
           }
         ],
         reconstruction: {
@@ -191,7 +202,11 @@ const examples = [
             afterTitle: "Assembled input",
             afterMeta: "2 selected views",
             instruction: "Selected front as front and remapped the candidate's right view as back.",
-            note: "Only the composed front + back views were sent to Hunyuan."
+            note: "Only the composed front + back views were sent to Hunyuan.",
+            references: [
+              { src: "static/images/table-1/2d-selected-front.png", label: "Front" },
+              { src: "static/images/table-1/2d-selected-back.png", label: "Back · from right" }
+            ]
           }
         ],
         reconstruction: {
@@ -240,15 +255,16 @@ const examples = [
         imageEdit: {
           before: "static/images/table-2/edit-before.png",
           after: "static/images/table-2/edit-after.png",
-          instruction: "Here the front and back view is correct but in the left and right view, the red wooden leg should stick to the ground."
+          instruction: "Here the front and back view is correct but in the left and right view, the red wooden leg should stick to the ground.",
+          note: "This later edit remains in the history; the preferred final below is the earlier front + back reconstruction."
         },
         reconstruction: {
           input: "static/images/table-2/hunyuan-input.png",
           inputTitle: "Hunyuan input",
-          inputMeta: "four selected views",
-          inputNote: "front · left · back · right",
+          inputMeta: "preferred 3D run",
+          inputNote: "front + back · pre-edit candidate",
           model: "static/models/table-2/final.glb",
-          modelTitle: "Final output"
+          modelTitle: "Preferred final output"
         }
       },
       {
@@ -279,7 +295,11 @@ const examples = [
           before: "static/images/table-2/2d-edit-before.png",
           after: "static/images/table-2/2d-edit-after.png",
           instruction: "The white wooden leg has twoside to go through the white one, the front view is correct.",
-          note: "The edit used the revised drawing and the Drawing-first #1 Front view as references."
+          note: "The edit used the revised drawing and the Drawing-first #1 Front view as references.",
+          references: [
+            { src: "static/images/table-2/2d-v2-perspective.png", label: "Revised perspective drawing" },
+            { src: "static/images/table-2/2d-edit-ref-front.png", label: "Drawing-first #1 · Front" }
+          ]
         },
         viewEdits: [
           {
@@ -291,7 +311,12 @@ const examples = [
             afterTitle: "View selection v2",
             afterMeta: "final · front + back",
             instruction: "Kept the same selected front and replaced only the back with the edited candidate.",
-            note: "Final front: Drawing-first #2 · Final back: Drawing-first · Edit"
+            note: "Final front: Drawing-first #2 · Final back: Drawing-first · Edit",
+            references: [
+              { src: "static/images/table-2/2d-selected-front.png", label: "Front · retained" },
+              { src: "static/images/table-2/2d-previous-back.png", label: "Previous back" },
+              { src: "static/images/table-2/2d-selected-back.png", label: "Back · replaced" }
+            ]
           }
         ],
         reconstruction: {
@@ -309,8 +334,8 @@ const examples = [
     id: "table-3",
     title: "Table 3",
     thumbnail: "static/images/table-3/hunyuan-input.png",
-    summary: "The unchanged VR geometry receives one appearance revision. A separate three-drawing path reviews a square-support edit, but prepares front, left, and back from two other candidates; that 2D run has no recorded GLB.",
-    badges: ["3D + 2D inputs", "No VR geometry edit", "2D input prepared · no GLB"],
+    summary: "The unchanged VR geometry receives one appearance revision. A separate three-drawing path reviews a square-support edit, then completes a front + back + right reconstruction assembled from two other candidates.",
+    badges: ["3D + 2D inputs", "No VR geometry edit", "Updated 2D final model"],
     specification: {
       description: "A thick light-gray vertical concrete slab supporting the right side.",
       parts: [
@@ -353,7 +378,7 @@ const examples = [
         type: "2d",
         kicker: "2D input branch",
         title: "Three-drawing condition",
-        description: "Front, right-side, and front-right perspective drawings guide the 2D path. The prepared Hunyuan views exist, but this run did not record a completed reconstruction.",
+        description: "Front, right-side, and front-right perspective drawings guide the 2D path. The latest reconstruction replaces the earlier front and back, moves the prior left image to the right slot, and omits left.",
         versions: [
           {
             title: "2D Input",
@@ -370,7 +395,12 @@ const examples = [
           before: "static/images/table-3/2d-edit-before.png",
           after: "static/images/table-3/2d-edit-after.png",
           instruction: "The side gray concrete support should be square.",
-          note: "This adjusted candidate was reviewed but was not used in the prepared Hunyuan composition."
+          note: "This adjusted candidate was reviewed but was not used in the final Hunyuan composition.",
+          references: [
+            { src: "static/images/table-3/2d-drawing-front.png", label: "Front drawing" },
+            { src: "static/images/table-3/2d-drawing-right.png", label: "Right-side drawing" },
+            { src: "static/images/table-3/2d-drawing-perspective.png", label: "Front-right drawing" }
+          ]
         },
         viewEdits: [
           {
@@ -378,21 +408,25 @@ const examples = [
             before: "static/images/table-3/2d-front-back-source.png",
             after: "static/images/table-3/2d-left-source.png",
             beforeTitle: "Front + back source",
-            beforeMeta: "Description-first #2",
-            afterTitle: "Left source",
+            beforeMeta: "Description-first #1",
+            afterTitle: "Right source",
             afterMeta: "Drawing-first #2",
-            instruction: "Combined front + back from one candidate with left from a different candidate.",
-            note: "The prepared split views confirm this mapping; no reconstruction event was written."
+            instruction: "Combined front + back from one candidate with its right view sourced from another candidate's left view.",
+            note: "The latest final omits left and uses front + back + right.",
+            references: [
+              { src: "static/images/table-3/2d-selected-front.png", label: "Front" },
+              { src: "static/images/table-3/2d-selected-back.png", label: "Back" },
+              { src: "static/images/table-3/2d-selected-right.png", label: "Right · from left" }
+            ]
           }
         ],
         reconstruction: {
           input: "static/images/table-3/2d-hunyuan-input.png",
           inputTitle: "Hunyuan input",
-          inputMeta: "prepared only",
-          inputNote: "front + left + back",
-          model: null,
-          modelTitle: "Final output unavailable",
-          modelNote: "No 2D-run GLB or completed reconstruction event is present in this run folder."
+          inputMeta: "latest view selection",
+          inputNote: "front + back + right (right sourced from left)",
+          model: "static/models/table-3/final-2d.glb",
+          modelTitle: "Final output · 2D input"
         }
       }
     ]
@@ -463,7 +497,11 @@ const examples = [
             afterTitle: "View selection v2",
             afterMeta: "Drawing-first #1 · final",
             instruction: "Replaced all four selected views, including front, with a different candidate.",
-            note: "front · left · back · right all changed between the two reconstruction attempts."
+            note: "front · left · back · right all changed between the two reconstruction attempts.",
+            references: [
+              { src: "static/images/chicken-desk/2d-previous-front.png", label: "Previous front" },
+              { src: "static/images/chicken-desk/2d-selected-front.png", label: "Replacement front" }
+            ]
           }
         ],
         reconstruction: {
@@ -481,8 +519,8 @@ const examples = [
     id: "towel-rack",
     title: "Towel Rack",
     thumbnail: "static/images/towel-rack/2d-hunyuan-input.png",
-    summary: "This case exposes two parallel authoring paths: three true VR geometry versions and a single-drawing 2D condition with an image correction followed by explicit front + back selection.",
-    badges: ["3D + 2D inputs", "3 VR geometry versions", "2D image + view edit"],
+    summary: "This case exposes two parallel authoring paths: two retained VR geometry versions and a single-drawing 2D condition with an image correction followed by explicit front + back selection.",
+    badges: ["3D + 2D inputs", "2 retained VR versions", "2D image + view edit"],
     specification: {
       description: "made from a single thick, smooth, dark-wood tubular form.",
       parts: [
@@ -496,7 +534,7 @@ const examples = [
         type: "vr",
         kicker: "3D input branch",
         title: "VR geometry edit",
-        description: "Three distinct CSV hashes capture two user-authored geometry edits. The latest presentation run reuses v3.",
+        description: "The accidental 12,280-point intermediate recording is omitted. The later 11,968-point geometry is shown directly as v2.",
         versions: [
           {
             title: "VR Input v1",
@@ -506,21 +544,12 @@ const examples = [
           },
           {
             title: "VR Input v2",
-            meta: "12,280 points",
-            model: "static/models/towel-rack/vr-v2.glb",
-            guide: "static/images/towel-rack/vr-v2-guide.png"
-          },
-          {
-            title: "VR Input v3",
             meta: "11,968 points",
             model: "static/models/towel-rack/vr-v3.glb",
             guide: "static/images/towel-rack/vr-v3-guide.png"
           }
         ],
-        transitions: [
-          "Added rack part 2 · Redrew rack part 1",
-          "Refined rack part 2 · Removed the lower extension"
-        ],
+        transitions: ["Redrew rack part 1 · Added the finalized rack part 2"],
         imageEdit: null,
         reconstruction: {
           input: "static/images/towel-rack/vr-hunyuan-input.png",
@@ -535,7 +564,7 @@ const examples = [
         type: "2d",
         kicker: "2D input branch",
         title: "Single-drawing condition",
-        description: "A separate 2D condition starts from one front-view drawing; it is not a fourth VR geometry version.",
+        description: "A separate 2D condition starts from one front-view drawing; it is not a third VR geometry version.",
         versions: [
           {
             title: "2D Input",
@@ -547,26 +576,33 @@ const examples = [
         imageEdit: {
           before: "static/images/towel-rack/2d-edit-before.png",
           after: "static/images/towel-rack/2d-edit-after.png",
-          instruction: "The front and back view are correct but in the left and right view, the horizontal rack part should have distance to the back vertical part."
+          instruction: "The front and back view are correct but in the left and right view, the horizontal rack part should have distance to the back vertical part.",
+          references: [
+            { src: "static/images/towel-rack/2d-drawing.png", label: "Original front drawing" }
+          ]
         },
         viewEdits: [
           {
             kind: "selection",
-            before: "static/images/towel-rack/2d-edit-after.png",
+            before: "static/images/towel-rack/2d-edit-before.png",
             after: "static/images/towel-rack/2d-hunyuan-input.png",
-            beforeTitle: "Edited candidate",
-            beforeMeta: "revised multiview",
+            beforeTitle: "Selected candidate",
+            beforeMeta: "Description-first #2",
             afterTitle: "Assembled input",
             afterMeta: "2 selected views",
-            instruction: "Selected front + back from the edited candidate.",
-            note: "The 2D reconstruction uses only these two corrected views."
+            instruction: "Selected front + back; both were retained from before the left/right edit.",
+            note: "The reviewed edit above was not used in the final reconstruction input.",
+            references: [
+              { src: "static/images/towel-rack/2d-selected-front.png", label: "Front" },
+              { src: "static/images/towel-rack/2d-selected-back.png", label: "Back" }
+            ]
           }
         ],
         reconstruction: {
           input: "static/images/towel-rack/2d-hunyuan-input.png",
           inputTitle: "Hunyuan input",
-          inputMeta: "corrected views",
-          inputNote: "front + back",
+          inputMeta: "recorded view selection",
+          inputNote: "front + back · Description-first #2",
           model: "static/models/towel-rack/final-2d.glb",
           modelTitle: "Final output · 2D input"
         }
@@ -691,6 +727,25 @@ function editFlow(edit, exampleTitle) {
   const beforeMeta = edit.beforeMeta || "selected candidate";
   const afterTitle = edit.afterTitle || "After image";
   const afterMeta = edit.afterMeta || "revised candidate";
+  const references = edit.references || [];
+  const referenceLabel = edit.referenceLabel || (isSelection ? "Final selected views" : "Edit references");
+  const referenceGrid = references.length
+    ? `
+          <div class="edit-references">
+            <p class="edit-reference-heading">${escapeHtml(referenceLabel)}</p>
+            <div class="edit-reference-grid reference-count-${references.length}">
+              ${references.map((reference) => `
+                <div class="edit-reference">
+                  ${imageButton(
+                    reference.src,
+                    `${exampleTitle} ${reference.label}`,
+                    `${referenceLabel} · ${reference.label}`
+                  )}
+                  <span class="edit-reference-label">${escapeHtml(reference.label)}</span>
+                </div>`).join("")}
+            </div>
+          </div>`
+    : "";
   return `
     <div class="edit-flow ${isSelection ? "is-selection" : "is-instruction"}">
       ${mediaCard({
@@ -706,6 +761,7 @@ function editFlow(edit, exampleTitle) {
             ? `<p class="selection-copy">${escapeHtml(edit.instruction)}</p>`
             : `<blockquote>“${escapeHtml(edit.instruction)}”</blockquote>`}
           ${edit.note ? `<p class="edit-note">${escapeHtml(edit.note)}</p>` : ""}
+          ${referenceGrid}
         </div>
       </article>
       ${mediaCard({

@@ -864,6 +864,66 @@ model-viewer {
   font-size: 11px;
 }
 
+.edit-references {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgb(151 80 32 / 0.18);
+}
+
+.edit-flow.is-selection .edit-references {
+  border-top-color: rgb(61 91 205 / 0.2);
+}
+
+.edit-reference-heading {
+  margin: 0 0 8px;
+  color: inherit;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.edit-reference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.edit-reference-grid.reference-count-1 {
+  grid-template-columns: minmax(0, 118px);
+}
+
+.edit-reference .image-button {
+  border: 1px solid rgb(255 255 255 / 0.76);
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgb(38 62 145 / 0.08);
+}
+
+.edit-reference .image-button::after {
+  right: 5px;
+  bottom: 5px;
+  padding: 2px 5px;
+  font-size: 8px;
+}
+
+.edit-reference img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #fff;
+}
+
+.edit-reference-label {
+  display: block;
+  margin-top: 4px;
+  color: inherit;
+  font-size: 9px;
+  font-weight: 650;
+  line-height: 1.25;
+  opacity: 0.76;
+}
+
 .no-edit-card {
   display: flex;
   padding: 20px;
