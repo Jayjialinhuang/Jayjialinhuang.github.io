@@ -2,7 +2,7 @@ const examples = [
   {
     id: "school-desk",
     title: "School Desk",
-    thumbnail: "static/images/school-desk/hunyuan-input.png",
+    referenceImage: "static/images/school-desk.png",
     summary: "School Desk combines two VR geometry versions with a separate two-drawing condition. The 2D path recenters the seat, then explicitly selects the edited front and left views for reconstruction.",
     badges: ["3D + 2D inputs", "2 VR geometry versions", "2D image + view edit"],
     specification: {
@@ -110,7 +110,7 @@ const examples = [
   {
     id: "table-1",
     title: "Table 1",
-    thumbnail: "static/images/table-1/hunyuan-input.png",
+    referenceImage: "static/images/table1.jpeg",
     summary: "The coffee table appears in parallel VR and 2D paths. The 2D run alternates between one- and two-drawing conditions, then maps a selected candidate's front and right views into the final reconstruction input.",
     badges: ["3D + 2D inputs", "No VR geometry edit", "2D input + view edits"],
     specification: {
@@ -223,7 +223,7 @@ const examples = [
   {
     id: "table-2",
     title: "Table 2",
-    thumbnail: "static/images/table-2/hunyuan-input.png",
+    referenceImage: "static/images/table2.jpeg",
     summary: "The VR geometry stays fixed, while the 2D path replaces one authored perspective drawing, performs a text-guided correction, and finally swaps the selected back view while preserving the front.",
     badges: ["3D + 2D inputs", "No VR geometry edit", "2D drawing + image + view edits"],
     specification: {
@@ -333,7 +333,7 @@ const examples = [
   {
     id: "table-3",
     title: "Table 3",
-    thumbnail: "static/images/table-3/hunyuan-input.png",
+    referenceImage: "static/images/table3.jpeg",
     summary: "The unchanged VR geometry receives one appearance revision. A separate three-drawing path reviews a square-support edit, then completes a front + back + right reconstruction assembled from two other candidates.",
     badges: ["3D + 2D inputs", "No VR geometry edit", "Updated 2D final model"],
     specification: {
@@ -434,7 +434,7 @@ const examples = [
   {
     id: "chicken-desk",
     title: "Chicken Desk",
-    thumbnail: "static/images/chicken-desk/hunyuan-input.png",
+    referenceImage: "static/images/chicken-desk.png",
     summary: "The two VR runs reuse one CSV, while the independent two-drawing path performs a real selection edit: every reconstruction view—including front—is replaced with a different multiview candidate.",
     badges: ["3D + 2D inputs", "Same VR CSV across runs", "2D front selection edit"],
     specification: {
@@ -518,7 +518,7 @@ const examples = [
   {
     id: "towel-rack",
     title: "Towel Rack",
-    thumbnail: "static/images/towel-rack/2d-hunyuan-input.png",
+    referenceImage: "static/images/towelRack1.jpeg",
     summary: "This case exposes two parallel authoring paths: two retained VR geometry versions and a single-drawing 2D condition with an image correction followed by explicit front + back selection.",
     badges: ["3D + 2D inputs", "2 retained VR versions", "2D image + view edit"],
     specification: {
@@ -870,6 +870,21 @@ function specificationMarkup(specification) {
     </aside>`;
 }
 
+function referenceMarkup(example) {
+  return `
+    <figure class="reference-card">
+      <figcaption>
+        <span class="reference-kicker">Reference image</span>
+        <span class="reference-label">Original inspiration</span>
+      </figcaption>
+      ${imageButton(
+        example.referenceImage,
+        `${example.title} reference image`,
+        `${example.title} · Reference image`
+      )}
+    </figure>`;
+}
+
 function renderTabs(activeId) {
   tabsElement.innerHTML = examples.map((example) => `
     <button
@@ -881,7 +896,7 @@ function renderTabs(activeId) {
       aria-controls="example-detail"
       tabindex="${example.id === activeId ? "0" : "-1"}"
       data-example-id="${escapeHtml(example.id)}">
-      <img class="tab-thumb" src="${escapeHtml(example.thumbnail)}" alt="" loading="lazy">
+      <img class="tab-thumb" src="${escapeHtml(example.referenceImage)}" alt="" loading="lazy">
       <span class="tab-label">${escapeHtml(example.title)}</span>
     </button>`).join("");
 }
@@ -892,12 +907,15 @@ function renderExample(id, { updateHash = true } = {}) {
   detailElement.innerHTML = `
     <div class="example-intro">
       <article class="intro-card">
-        <p class="example-index">Case ${String(examples.indexOf(example) + 1).padStart(2, "0")}</p>
-        <h2>${escapeHtml(example.title)}</h2>
-        <p class="example-summary">${escapeHtml(example.summary)}</p>
-        <div class="badges">
-          ${example.badges.map((badge) => `<span class="badge">${escapeHtml(badge)}</span>`).join("")}
+        <div class="intro-copy">
+          <p class="example-index">Case ${String(examples.indexOf(example) + 1).padStart(2, "0")}</p>
+          <h2>${escapeHtml(example.title)}</h2>
+          <p class="example-summary">${escapeHtml(example.summary)}</p>
+          <div class="badges">
+            ${example.badges.map((badge) => `<span class="badge">${escapeHtml(badge)}</span>`).join("")}
+          </div>
         </div>
+        ${referenceMarkup(example)}
       </article>
       ${specificationMarkup(example.specification)}
     </div>
