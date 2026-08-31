@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jialin Huang">
+  <meta name="description" content="An anonymized, paired view of HandMade user-study workflows completed with 2D drawings and 3D spatial sketches.">
+  <meta name="theme-color" content="#17233c">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HandMade">
+  <meta property="og:title" content="HandMade — Paired User Study Data">
+  <meta property="og:description" content="Compare ten participants' 2D and 3D creation workflows from authored input through revision, view selection, and final reconstruction.">
+  <meta property="og:url" content="https://jayjialinhuang.github.io/handmade/users_data/">
+  <meta property="og:image" content="https://jayjialinhuang.github.io/handmade/users_data/static/assets/reference-school-chair.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HandMade — Paired User Study Data">
+  <meta name="twitter:description" content="Ten anonymized, paired 2D and 3D HandMade workflows.">
+  <meta name="twitter:image" content="https://jayjialinhuang.github.io/handmade/users_data/static/assets/reference-school-chair.png">
+  <title>HandMade — Paired User Study Data</title>
+  <link rel="icon" href="../../images/favicon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/users-data.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+  <script defer src="static/js/participants-data.js"></script>
+  <script defer src="static/js/users-data.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#participant-detail">Skip to participant data</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="HandMade home">
+        <span class="brand-mark" aria-hidden="true">HM</span>
+        <span>HandMade</span>
+      </a>
+      <nav class="header-links" aria-label="Project navigation">
+        <a href="../examples/">Examples</a>
+        <a href="https://arxiv.org/abs/2606.27738" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+        <a href="../../">Jialin Huang <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">Paired-condition user study</p>
+        <h1 id="page-title">2D and 3D, side by side</h1>
+        <p class="hero-copy">
+          Follow ten anonymized participants as each recreates the same school-chair reference
+          through a 2D drawing workflow and a part-labeled 3D spatial workflow.
+        </p>
+        <dl class="hero-stats" aria-label="Study data overview">
+          <div><dt>10</dt><dd>participants</dd></div>
+          <div><dt>20</dt><dd>paired workflows</dd></div>
+          <div><dt>28</dt><dd>reconstructions</dd></div>
+          <div><dt>156</dt><dd>generated candidates</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="study-browser" aria-labelledby="browser-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Participant browser</p>
+          <h2 id="browser-title">Choose a paired session</h2>
+        </div>
+        <p class="browser-help">Each tab compares one participant's 2D and 3D workflows.</p>
+      </div>
+      <div id="participant-tabs" class="participant-tabs" role="tablist" aria-label="User-study participants"></div>
+    </section>
+
+    <section class="scope-note" aria-label="Published data scope">
+      <strong>Published scope</strong>
+      <span>Authored inputs, recorded revisions, selected reconstruction inputs, and final meshes are shown. Raw interaction logs, timestamps, internal identifiers, prompts, and CSV traces are excluded.</span>
+    </section>
+
+    <section id="participant-detail" class="participant-detail" aria-live="polite" aria-atomic="false"></section>
+
+    <noscript>
+      <p class="noscript">This interactive page requires JavaScript to display the paired sessions.</p>
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>HandMade</strong>
+      <span>Spatial Prompting for Generative 3D Creation with Part-Labeled VR Sketches</span>
+    </div>
+    <a href="https://jayjialinhuang.github.io/">Jialin Huang</a>
+  </footer>
+
+  <dialog id="image-dialog" class="image-dialog" aria-label="Expanded study image">
+    <button class="dialog-close" type="button" aria-label="Close expanded image">Close</button>
+    <img id="dialog-image" alt="">
+    <p id="dialog-caption"></p>
+  </dialog>
+</body>
+</html>
