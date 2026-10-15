@@ -3,13 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <meta http-equiv="refresh" content="0; url=examples/">
-  <link rel="canonical" href="https://jayjialinhuang.github.io/handmade/examples/">
-  <title>HandMade Examples</title>
-  <script>location.replace("examples/" + location.search + location.hash);</script>
+  <meta name="description" content="HandMade combines rough, part-labeled 3D sketches and language to help users turn their ideas into textured 3D assets.">
+  <meta name="author" content="Jialin Huang, Rana Hanocka, Ariel Shamir, Yotam Gingold">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="HandMade: Spatial Prompting for Generative 3D Creation with Part-Labeled VR Sketches">
+  <meta property="og:description" content="An authoring system combining rough, part-labeled VR sketches with text for open-domain generation.">
+  <meta property="og:url" content="https://jayjialinhuang.github.io/handmade/">
+  <meta property="og:image" content="https://jayjialinhuang.github.io/images/handmade.png">
+  <meta property="og:image:alt" content="HandMade pipeline and gallery of sketches and generated 3D meshes">
+  <link rel="canonical" href="https://jayjialinhuang.github.io/handmade/">
+  <link rel="stylesheet" href="../stylesheet.css">
+  <link rel="stylesheet" href="project.css">
+  <title>HandMade | Jialin Huang</title>
 </head>
 <body>
-  <p>Opening <a href="examples/">HandMade interactive examples</a>…</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav class="project-nav" aria-label="Project navigation">
+    <a href="../">Jialin Huang</a>
+    <div>
+      <a href="#abstract">Abstract</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#video">Video</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <header class="project-header">
+      <h1>HandMade<span>Spatial Prompting for Generative 3D Creation<br class="desktop-break"> with Part-Labeled VR Sketches</span></h1>
+      <p class="authors">
+        <span><a href="../">Jialin Huang</a><sup>1</sup>,</span>
+        <span><a href="https://people.cs.uchicago.edu/~ranahanocka/">Rana Hanocka</a><sup>2</sup>,</span>
+        <span><a href="https://faculty.runi.ac.il/arik/site/">Ariel Shamir</a><sup>3</sup>,</span>
+        <span><a href="https://cragl.cs.gmu.edu/">Yotam Gingold</a><sup>1</sup></span>
+      </p>
+      <p class="affiliations">
+        <span><sup>1</sup>George Mason University</span>
+        <span><sup>2</sup>University of Chicago</span>
+        <span><sup>3</sup>Reichman University</span>
+      </p>
+      <p class="project-status">Preprint, 2026</p>
+      <div class="project-links" aria-label="Research resources">
+        <a class="primary-link" href="../data/HandMade.pdf">Paper</a>
+        <a href="#video">Video</a>
+      </div>
+    </header>
+
+    <section id="abstract" class="abstract-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>Text-to-3D generation lowers the barrier to 3D content creation, but text alone offers limited control over spatial relationships and structures. In contrast, using your hands to model 3D objects has been shown to be simple and intuitive, but lacks the ability to be precise and detailed. We present HandMade, an authoring system combining rough, part-labeled VR sketches with text for open-domain generation. Users create and describe a 3D sketch. HandMade converts it into multiview image guidance for 3D textured mesh synthesis. Empirical evaluations found closer sketch alignment on average than text-only and 2D sketch baselines. Users rated VR drawing higher than 2D for expressing structure and part relationships and preferred it for similar future tasks. Our findings highlight rough 3D sketches as usable generative guidance and intermediate views as checkpoints for selective revision and reuse.</p>
+    </section>
+
+    <section id="pipeline" aria-labelledby="pipeline-title">
+      <h2 id="pipeline-title">Pipeline</h2>
+      <figure>
+        <a class="pipeline-image" href="../images/handmade.png" aria-label="Open the HandMade pipeline figure at full size">
+          <img src="../images/handmade.png" width="1800" height="955" alt="A rough, color-coded 3D sketch and part descriptions guide multiview image generation. Users revise candidates through feedback and select views for textured 3D reconstruction. A gallery below shows five pairs of input sketches and resulting meshes.">
+        </a>
+        <figcaption>A rough, part-labeled VR 3D sketch is rendered into a multi-view guide image. The guide and object- and part-level text descriptions condition multi-view image synthesis. Users can revise candidates through conversational feedback and select views from one or more candidates. The selected views are then used to reconstruct a textured 3D mesh. Below: Example annotated 3D sketches and output textured meshes created with HandMade.</figcaption>
+      </figure>
+    </section>
+
+    <section id="video" aria-labelledby="video-title">
+      <h2 id="video-title">Video</h2>
+      <video controls playsinline preload="metadata" width="1920" height="1080" aria-label="HandMade system demonstration">
+        <source src="static/videos/HandmadeVideo.mp4" type="video/mp4">
+        Your browser does not support embedded video. <a href="static/videos/HandmadeVideo.mp4">Watch the video directly.</a>
+      </video>
+      <p class="video-link"><a href="static/videos/HandmadeVideo.mp4">Open video</a></p>
+    </section>
+  </main>
+
+  <footer><a href="../">Jialin Huang</a> · HandMade · 2026</footer>
 </body>
 </html>
